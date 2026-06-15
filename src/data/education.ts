@@ -2,7 +2,7 @@ export const educationData = [
   {
     degree: "Master of Computer Applications (MCA)",
     school: "UKA Tarsadia University",
-    sub: "Bardoli, Gujarat · 2023 – 2025",
+    sub: "Bardoli, Gujarat · 2023 – 2026",
     score: "🏆 CGPA 9.04 · SGPA 10.00",
     scoreClass: "text-green-500 bg-green-500/10 border-green-500/20"
   },
