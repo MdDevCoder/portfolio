@@ -1,0 +1,177 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0a0a0f;
+  --color-bg2: #111118;
+  --color-bg3: #16161f;
+  --color-surface: #1c1c28;
+  --color-surface2: #222232;
+  --color-border: #2a2a3d;
+  --color-border2: #363656;
+  --color-text: #f0f0ff;
+  --color-text2: #a0a0c0;
+  --color-text3: #606080;
+  --color-accent: #7c6af7;
+  --color-accent2: #a78bfa;
+  --color-accent3: #c4b5fd;
+  --color-teal: #22d3c8;
+  --color-teal2: #06b6d4;
+  --color-pink: #f472b6;
+  --color-amber: #f59e0b;
+  --color-green: #22c55e;
+  --color-red: #ef4444;
+
+  --shadow-glow-accent: 0 0 30px rgba(124,106,247,0.3);
+  --shadow-glow-accent-hover: 0 8px 40px rgba(124,106,247,0.4);
+  
+  --animate-float: float 8s ease-in-out infinite;
+  --animate-pulse-fast: pulse-fast 2s ease infinite;
+  --animate-scroll-down: scroll-down 1.5s ease infinite;
+}
+
+@layer base {
+  :root {
+    --bg: #0a0a0f;
+    --bg2: #111118;
+    --bg3: #16161f;
+    --surface: #1c1c28;
+    --surface2: #222232;
+    --border: #2a2a3d;
+    --border2: #363656;
+    --text: #f0f0ff;
+    --text2: #a0a0c0;
+    --text3: #606080;
+    --accent: #7c6af7;
+    --accent2: #a78bfa;
+    --accent3: #c4b5fd;
+    --teal: #22d3c8;
+    --teal2: #06b6d4;
+    --pink: #f472b6;
+    --amber: #f59e0b;
+    --green: #22c55e;
+    --red: #ef4444;
+  }
+
+  .light {
+    --bg: #f8f8ff;
+    --bg2: #f0f0fa;
+    --bg3: #e8e8f8;
+    --surface: #ffffff;
+    --surface2: #f4f4ff;
+    --border: #e0e0f0;
+    --border2: #c8c8e0;
+    --text: #111111;
+    --text2: #444444;
+    --text3: #888888;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    overflow-x: hidden;
+    line-height: 1.625;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  ::selection {
+    background: var(--accent);
+    color: #fff;
+  }
+
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--bg);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--accent);
+    border-radius: 9999px;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0) scale(1) }
+    50% { transform: translateY(-30px) scale(1.05) }
+  }
+  @keyframes pulse-fast {
+    0%, 100% { opacity: 1 }
+    50% { opacity: 0.4 }
+  }
+  @keyframes scroll-down {
+    0% { transform: scaleY(0); transform-origin: top }
+    50% { transform: scaleY(1); transform-origin: top }
+    100% { transform: scaleY(1); transform-origin: bottom; opacity: 0 }
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    background-image: linear-gradient(to bottom right, #ffffff, var(--accent2), var(--teal));
+  }
+  
+  .glass-nav {
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    background: rgba(10, 10, 15, 0.85);
+  }
+
+  .light .glass-nav {
+    background: rgba(255, 255, 255, 0.85);
+  }
+  
+  .timeline-line::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--accent), var(--teal), transparent);
+    margin-left: 20px;
+  }
+  @media (max-width: 900px) {
+    .timeline-line::before {
+      margin-left: 12px;
+    }
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center gap-2 bg-accent text-white px-8 py-3 rounded-xl font-semibold text-sm transition-all duration-300 border-none cursor-pointer shadow-glow-accent hover:bg-accent2 hover:-translate-y-0.5 hover:shadow-glow-accent-hover;
+  }
+  
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 bg-transparent text-[var(--text)] px-8 py-3 rounded-xl font-semibold text-sm border border-[var(--border2)] transition-all duration-300 hover:bg-[var(--surface)] hover:border-accent hover:text-accent hover:-translate-y-0.5;
+  }
+
+  .section-padding {
+    @apply py-24 px-6;
+  }
+
+  .container-custom {
+    @apply max-w-6xl mx-auto;
+  }
+
+  .section-label {
+    @apply inline-block text-xs font-semibold text-accent2 uppercase tracking-widest mb-3;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-5xl font-extrabold tracking-tight leading-tight mb-4;
+  }
+
+  .section-desc {
+    @apply text-[var(--text2)] text-base max-w-2xl leading-relaxed;
+  }
+}
