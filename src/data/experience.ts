@@ -3,7 +3,7 @@ export const experienceData = [
     id: 1,
     role: "Software Engineer",
     company: "Sirius Global Ltd. · Kakrapar Atomic Power Station, Gujarat",
-    date: "Dec 2024 – Aug 2026",
+    date: "Dec 2024 – Aug 2025",
     location: "📍 Nuclear Sector · Industrial IT",
     color: "var(--accent)",
     bgColor: "rgba(124,106,247,0.12)",
