@@ -13,7 +13,7 @@ export const projectsData = [
     desc: "A comprehensive personal finance management platform built with the MERN stack. Features a highly responsive UI with custom dark mode, secure JWT authentication, and a powerful analytics dashboard utilizing native MongoDB aggregation pipelines and Recharts. Allows users to track transactions, manage budgets, and export financial reports.",
     techTags: ["React 19", "Tailwind CSS", "Node.js", "MongoDB", "Zustand"],
     links: [
-      { text: "🌐 View Live", url: "https://expense-flow-kago08efw-shaikh-muhammad-s-projects0423.vercel.app/", primary: true },
+      { text: "🌐 View Live", url: "https://expense-flow-liard-kappa.vercel.app/", primary: true },
       { text: "💻 GitHub", url: "https://github.com/MdDevCoder/ExpenseFlow", primary: false }
     ],
     featured: true
