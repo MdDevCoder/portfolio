@@ -1,5 +1,24 @@
 export const projectsData = [
   {
+    id: "expenseflow",
+    tags: ["web", "fullstack"],
+    bannerGradient: "from-indigo-600 to-emerald-500",
+    icon: "💸",
+    badges: [
+      { text: "Full Stack", type: "web", color: "text-teal-400 bg-teal-400/15 border-teal-400/30" },
+      { text: "2026", type: "featured", color: "text-accent2 bg-accent/20 border-accent/30" }
+    ],
+    title: "ExpenseFlow",
+    subtitle: "React 19 · Node.js · MongoDB · Tailwind v4",
+    desc: "A comprehensive personal finance management platform built with the MERN stack. Features a highly responsive UI with custom dark mode, secure JWT authentication, and a powerful analytics dashboard utilizing native MongoDB aggregation pipelines and Recharts. Allows users to track transactions, manage budgets, and export financial reports.",
+    techTags: ["React 19", "Tailwind CSS", "Node.js", "MongoDB", "Zustand"],
+    links: [
+      { text: "🌐 View Live", url: "https://expense-flow-kago08efw-shaikh-muhammad-s-projects0423.vercel.app/", primary: true },
+      { text: "💻 GitHub", url: "https://github.com/MdDevCoder/ExpenseFlow", primary: false }
+    ],
+    featured: true
+  },
+  {
     id: "neon-arcade",
     tags: ["web"],
     bannerGradient: "from-[#22d3c8] via-[#7c6af7] to-[#f472b6]",
