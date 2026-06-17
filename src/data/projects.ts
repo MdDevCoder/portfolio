@@ -1,5 +1,24 @@
 export const projectsData = [
   {
+    id: "careerflow",
+    tags: ["web", "fullstack"],
+    bannerGradient: "from-purple-600 to-blue-500",
+    icon: "💼",
+    badges: [
+      { text: "Full Stack", type: "web", color: "text-teal-400 bg-teal-400/15 border-teal-400/30" },
+      { text: "2026", type: "featured", color: "text-accent2 bg-accent/20 border-accent/30" }
+    ],
+    title: "CareerFlow",
+    subtitle: "React 19 · Node.js · MongoDB · dnd-kit",
+    desc: "An intelligent job application tracker and career CRM built with the MERN stack. Features a highly interactive drag-and-drop Kanban board, an analytics dashboard with Recharts, and automated interview scheduling reminders. Helps job seekers organize applications, track health scores, and optimize their job search workflow.",
+    techTags: ["React", "TypeScript", "Node.js", "MongoDB", "Tailwind CSS", "dnd-kit"],
+    links: [
+      { text: "🌐 View Live", url: "https://careerflow-beta.vercel.app/", primary: true },
+      { text: "💻 GitHub", url: "https://github.com/MdDevCoder/careerflow", primary: false }
+    ],
+    featured: true
+  },
+  {
     id: "expenseflow",
     tags: ["web", "fullstack"],
     bannerGradient: "from-indigo-600 to-emerald-500",
