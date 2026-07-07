@@ -24,24 +24,24 @@ const About = () => {
               <div className="flex flex-col gap-2.5">
                 <div className="flex items-center gap-3 text-sm text-[var(--text2)]"><span className="text-teal text-base shrink-0">📍</span>Vyara, Gujarat, India</div>
                 <div className="flex items-center gap-3 text-sm text-[var(--text2)]"><span className="text-teal text-base shrink-0">🎓</span>MCA — UKA Tarsadia University (CGPA 9.04)</div>
-                <div className="flex items-center gap-3 text-sm text-[var(--text2)]"><span className="text-teal text-base shrink-0">💼</span>Previously @ Sirius Global Ltd. (Kakrapar Atomic)</div>
+                <div className="flex items-center gap-3 text-sm text-[var(--text2)]"><span className="text-teal text-base shrink-0">💼</span>Previously @ Sirius Global Ltd.</div>
                 <div className="flex items-center gap-3 text-sm text-[var(--text2)]"><span className="text-teal text-base shrink-0">🌐</span>Full Stack · Mobile · Cloud · Web3</div>
                 <div className="flex items-center gap-3 text-sm text-[var(--text2)]"><span className="text-teal text-base shrink-0">📧</span>muhammadshaikh4203@gmail.com</div>
                 <div className="flex items-center gap-3 text-sm text-[var(--text2)]"><span className="text-teal text-base shrink-0">📱</span>+91-7990521332</div>
               </div>
             </div>
 
-            <div className="flex flex-row flex-wrap gap-3 mt-6">
-              <div className="bg-[var(--surface2)] border border-[var(--border)] rounded-xl py-3 px-4 flex items-center gap-3 text-xs font-medium shadow-sm flex-1 min-w-[140px]">
+            <div className="static md:absolute md:-bottom-5 md:-right-5 flex flex-row flex-wrap md:flex-col gap-3 mt-4 md:mt-0">
+              <div className="bg-[var(--surface2)] border border-[var(--border)] rounded-xl py-3 px-4 flex items-center gap-3 text-xs font-medium shadow-[0_8px_32px_rgba(0,0,0,0.3)] min-w-[180px]">
                 <span className="text-lg">⚛️</span>React · Next.js
               </div>
-              <div className="bg-[var(--surface2)] border border-[var(--border)] rounded-xl py-3 px-4 flex items-center gap-3 text-xs font-medium shadow-sm flex-1 min-w-[140px]">
+              <div className="bg-[var(--surface2)] border border-[var(--border)] rounded-xl py-3 px-4 flex items-center gap-3 text-xs font-medium shadow-[0_8px_32px_rgba(0,0,0,0.3)] min-w-[180px]">
                 <span className="text-lg">📱</span>Android Native
               </div>
-              <div className="bg-[var(--surface2)] border border-[var(--border)] rounded-xl py-3 px-4 flex items-center gap-3 text-xs font-medium shadow-sm flex-1 min-w-[140px]">
+              <div className="bg-[var(--surface2)] border border-[var(--border)] rounded-xl py-3 px-4 flex items-center gap-3 text-xs font-medium shadow-[0_8px_32px_rgba(0,0,0,0.3)] min-w-[180px]">
                 <span className="text-lg">☁️</span>Cloud & IoT
               </div>
-              <div className="bg-[var(--surface2)] border border-[var(--border)] rounded-xl py-3 px-4 flex items-center gap-3 text-xs font-medium shadow-sm flex-1 min-w-[140px]">
+              <div className="bg-[var(--surface2)] border border-[var(--border)] rounded-xl py-3 px-4 flex items-center gap-3 text-xs font-medium shadow-[0_8px_32px_rgba(0,0,0,0.3)] min-w-[180px]">
                 <span className="text-lg">🔐</span>Cybersecurity
               </div>
             </div>
