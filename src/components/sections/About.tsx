@@ -31,17 +31,17 @@ const About = () => {
               </div>
             </div>
 
-            <div className="static md:absolute md:-bottom-5 md:-right-5 flex flex-row flex-wrap md:flex-col gap-3 mt-4 md:mt-0">
-              <div className="bg-[var(--surface2)] border border-[var(--border)] rounded-xl py-3 px-4 flex items-center gap-3 text-xs font-medium shadow-[0_8px_32px_rgba(0,0,0,0.3)] min-w-[180px]">
+            <div className="flex flex-row flex-wrap gap-3 mt-6">
+              <div className="bg-[var(--surface2)] border border-[var(--border)] rounded-xl py-3 px-4 flex items-center gap-3 text-xs font-medium shadow-sm flex-1 min-w-[140px]">
                 <span className="text-lg">⚛️</span>React · Next.js
               </div>
-              <div className="bg-[var(--surface2)] border border-[var(--border)] rounded-xl py-3 px-4 flex items-center gap-3 text-xs font-medium shadow-[0_8px_32px_rgba(0,0,0,0.3)] min-w-[180px]">
+              <div className="bg-[var(--surface2)] border border-[var(--border)] rounded-xl py-3 px-4 flex items-center gap-3 text-xs font-medium shadow-sm flex-1 min-w-[140px]">
                 <span className="text-lg">📱</span>Android Native
               </div>
-              <div className="bg-[var(--surface2)] border border-[var(--border)] rounded-xl py-3 px-4 flex items-center gap-3 text-xs font-medium shadow-[0_8px_32px_rgba(0,0,0,0.3)] min-w-[180px]">
+              <div className="bg-[var(--surface2)] border border-[var(--border)] rounded-xl py-3 px-4 flex items-center gap-3 text-xs font-medium shadow-sm flex-1 min-w-[140px]">
                 <span className="text-lg">☁️</span>Cloud & IoT
               </div>
-              <div className="bg-[var(--surface2)] border border-[var(--border)] rounded-xl py-3 px-4 flex items-center gap-3 text-xs font-medium shadow-[0_8px_32px_rgba(0,0,0,0.3)] min-w-[180px]">
+              <div className="bg-[var(--surface2)] border border-[var(--border)] rounded-xl py-3 px-4 flex items-center gap-3 text-xs font-medium shadow-sm flex-1 min-w-[140px]">
                 <span className="text-lg">🔐</span>Cybersecurity
               </div>
             </div>
