@@ -20,11 +20,12 @@ export const projectsData = [
   },
   {
     id: "careerflow",
-    tags: ["web", "fullstack"],
+    tags: ["web", "fullstack", "saas"],
     bannerGradient: "from-purple-600 to-blue-500",
     icon: "💼",
     badges: [
       { text: "Full Stack", type: "web", color: "text-teal-400 bg-teal-400/15 border-teal-400/30" },
+      { text: "SaaS", type: "saas", color: "text-pink-400 bg-pink-400/15 border-pink-400/30" },
       { text: "2026", type: "featured", color: "text-accent2 bg-accent/20 border-accent/30" }
     ],
     title: "CareerFlow",
@@ -39,11 +40,12 @@ export const projectsData = [
   },
   {
     id: "expenseflow",
-    tags: ["web", "fullstack"],
+    tags: ["web", "fullstack", "saas"],
     bannerGradient: "from-indigo-600 to-emerald-500",
     icon: "💸",
     badges: [
       { text: "Full Stack", type: "web", color: "text-teal-400 bg-teal-400/15 border-teal-400/30" },
+      { text: "SaaS", type: "saas", color: "text-pink-400 bg-pink-400/15 border-pink-400/30" },
       { text: "2026", type: "featured", color: "text-accent2 bg-accent/20 border-accent/30" }
     ],
     title: "ExpenseFlow",
@@ -58,12 +60,13 @@ export const projectsData = [
   },
   {
     id: "elite-skill-hub",
-    tags: ["web", "gaming"],
+    tags: ["web", "gaming", "saas"],
     bannerGradient: "from-blue-500 via-indigo-600 to-cyan-500",
     icon: "🎮",
     badges: [
       { text: "Web", type: "web", color: "text-teal-400 bg-teal-400/15 border-teal-400/30" },
       { text: "Gaming", type: "gaming", color: "text-indigo-400 bg-indigo-400/15 border-indigo-400/30" },
+      { text: "SaaS", type: "saas", color: "text-pink-400 bg-pink-400/15 border-pink-400/30" },
       { text: "2026", type: "featured", color: "text-accent2 bg-accent/20 border-accent/30" }
     ],
     title: "Elite Skill Hub",
