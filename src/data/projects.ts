@@ -1,5 +1,24 @@
 export const projectsData = [
   {
+    id: "md-os",
+    tags: ["desktop", "ai"],
+    bannerGradient: "from-blue-600 to-indigo-500",
+    icon: "🧠",
+    badges: [
+      { text: "Desktop App", type: "desktop", color: "text-blue-400 bg-blue-400/15 border-blue-400/30" },
+      { text: "AI Assistant", type: "ai", color: "text-purple-400 bg-purple-400/15 border-purple-400/30" },
+      { text: "2026", type: "featured", color: "text-accent2 bg-accent/20 border-accent/30" }
+    ],
+    title: "MD OS",
+    subtitle: "Tauri · React · TypeScript · Node.js · Rust",
+    desc: "A proactive autonomous development assistant operating as an OS-level desktop widget and background daemon. Features real-time codebase health scoring, an end-to-end voice pipeline with wake word activation, distributed task runners, and intelligent project scanning. Acts as a continuous Development Advisor capable of detecting technical debt and recommending optimal next steps.",
+    techTags: ["Tauri", "React", "TypeScript", "Node.js", "Rust", "AI"],
+    links: [
+      { text: "💻 GitHub", url: "https://github.com/MdDevCoder/md-os", primary: true }
+    ],
+    featured: true
+  },
+  {
     id: "careerflow",
     tags: ["web", "fullstack"],
     bannerGradient: "from-purple-600 to-blue-500",
