@@ -13,9 +13,9 @@ export const achievementsData = [
   },
   {
     icon: "🌐",
-    stat: "2",
+    stat: "3",
     title: "Live Products in Production",
-    desc: "Two independent projects live on the web: CryptiqVerse (Web3 platform) and a School Result Management System — both cloud-deployed with real users."
+    desc: "Three independent projects live on the web: Cryptiqverse, Elite Skill Hub, and School ERP (CampusFlow) — all cloud-deployed with real users."
   },
   {
     icon: "📡",
