@@ -33,8 +33,8 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 glass-nav border-b border-[var(--border)] transition-all duration-300">
       <div className="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
-        <a href="#hero" className="text-lg font-bold text-gradient tracking-tight no-underline">
-          SM/
+        <a href="#hero" className="text-xl font-bold text-gradient tracking-tight no-underline font-mono">
+          &lt;MdDevCoder /&gt;
         </a>
         
         {/* Desktop Nav */}
