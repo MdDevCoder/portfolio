@@ -23,7 +23,7 @@ const About = () => {
               
               <div className="flex flex-col gap-2.5">
                 <div className="flex items-center gap-3 text-sm text-[var(--text2)]"><span className="text-teal text-base shrink-0">📍</span>Vyara, Gujarat, India</div>
-                <div className="flex items-center gap-3 text-sm text-[var(--text2)]"><span className="text-teal text-base shrink-0">🎓</span>MCA — UKA Tarsadia University (CGPA 9.04)</div>
+                <div className="flex items-center gap-3 text-sm text-[var(--text2)]"><span className="text-teal text-base shrink-0">🎓</span>MCA - Uka Tarsadia University</div>
                 <div className="flex items-center gap-3 text-sm text-[var(--text2)]"><span className="text-teal text-base shrink-0">💼</span>Previously @ Sirius Global Ltd.</div>
                 <div className="flex items-center gap-3 text-sm text-[var(--text2)]"><span className="text-teal text-base shrink-0">🌐</span>Full Stack · Mobile · Cloud · Web3</div>
                 <div className="flex items-center gap-3 text-sm text-[var(--text2)]"><span className="text-teal text-base shrink-0">📧</span>muhammadshaikh4203@gmail.com</div>
