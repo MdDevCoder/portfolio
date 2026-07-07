@@ -1,5 +1,21 @@
 export const projectsData = [
   {
+    id: "campus-flow",
+    tags: ["web", "fullstack", "saas", "enterprise"],
+    bannerGradient: "from-blue-600 to-cyan-600",
+    icon: "🏫",
+    badges: [
+      { text: "SaaS", type: "saas", color: "text-pink-400 bg-pink-400/15 border-pink-400/30" },
+      { text: "Enterprise", type: "enterprise", color: "text-indigo-400 bg-indigo-400/15 border-indigo-400/30" },
+      { text: "2026", type: "featured", color: "text-accent2 bg-accent/20 border-accent/30" }
+    ],
+    title: "Campus Flow",
+    subtitle: "Next.js · NestJS · PostgreSQL · Redis · AWS",
+    desc: "A next-generation, cloud-native School ERP designed to simplify and automate school operations. Built with an AI-first and event-driven architecture, it features online admissions, SIS, attendance, fee management, examinations, and intelligent analytics. Designed with a multi-tenant SaaS architecture, role-based access control, offline-first capabilities, and enterprise-grade security.",
+    techTags: ["Next.js", "NestJS", "TypeScript", "PostgreSQL", "Prisma", "Redis", "AWS", "AI"],
+    featured: true
+  },
+  {
     id: "md-os",
     tags: ["desktop", "ai"],
     bannerGradient: "from-blue-600 to-indigo-500",
