@@ -7,6 +7,7 @@ export const projectsData = [
     badges: [
       { text: "SaaS", type: "saas", color: "text-pink-400 bg-pink-400/15 border-pink-400/30" },
       { text: "Enterprise", type: "enterprise", color: "text-indigo-400 bg-indigo-400/15 border-indigo-400/30" },
+      { text: "Under Development", type: "status", color: "text-yellow-400 bg-yellow-400/15 border-yellow-400/30" },
       { text: "2026", type: "featured", color: "text-accent2 bg-accent/20 border-accent/30" }
     ],
     title: "Campus Flow",
@@ -42,6 +43,7 @@ export const projectsData = [
     badges: [
       { text: "Full Stack", type: "web", color: "text-teal-400 bg-teal-400/15 border-teal-400/30" },
       { text: "SaaS", type: "saas", color: "text-pink-400 bg-pink-400/15 border-pink-400/30" },
+      { text: "Live", type: "status", color: "text-green-400 bg-green-400/15 border-green-400/30" },
       { text: "2026", type: "featured", color: "text-accent2 bg-accent/20 border-accent/30" }
     ],
     title: "CareerFlow",
@@ -62,6 +64,7 @@ export const projectsData = [
     badges: [
       { text: "Full Stack", type: "web", color: "text-teal-400 bg-teal-400/15 border-teal-400/30" },
       { text: "SaaS", type: "saas", color: "text-pink-400 bg-pink-400/15 border-pink-400/30" },
+      { text: "Live", type: "status", color: "text-green-400 bg-green-400/15 border-green-400/30" },
       { text: "2026", type: "featured", color: "text-accent2 bg-accent/20 border-accent/30" }
     ],
     title: "ExpenseFlow",
@@ -83,6 +86,7 @@ export const projectsData = [
       { text: "Web", type: "web", color: "text-teal-400 bg-teal-400/15 border-teal-400/30" },
       { text: "Gaming", type: "gaming", color: "text-indigo-400 bg-indigo-400/15 border-indigo-400/30" },
       { text: "SaaS", type: "saas", color: "text-pink-400 bg-pink-400/15 border-pink-400/30" },
+      { text: "Live", type: "status", color: "text-green-400 bg-green-400/15 border-green-400/30" },
       { text: "2026", type: "featured", color: "text-accent2 bg-accent/20 border-accent/30" }
     ],
     title: "Elite Skill Hub",
