@@ -57,20 +57,21 @@ export const projectsData = [
     featured: true
   },
   {
-    id: "neon-arcade",
-    tags: ["web"],
-    bannerGradient: "from-[#22d3c8] via-[#7c6af7] to-[#f472b6]",
-    icon: "🕹️",
+    id: "elite-skill-hub",
+    tags: ["web", "gaming"],
+    bannerGradient: "from-blue-500 via-indigo-600 to-cyan-500",
+    icon: "🎮",
     badges: [
       { text: "Web", type: "web", color: "text-teal-400 bg-teal-400/15 border-teal-400/30" },
+      { text: "Gaming", type: "gaming", color: "text-indigo-400 bg-indigo-400/15 border-indigo-400/30" },
       { text: "2026", type: "featured", color: "text-accent2 bg-accent/20 border-accent/30" }
     ],
-    title: "Neon Arcade",
+    title: "Elite Skill Hub",
     subtitle: "React · TypeScript · Vite · Tailwind · Node.js",
-    desc: "A cyberpunk-themed browser arcade platform delivering retro-inspired gaming experiences with modern frontend engineering. Built with React + TypeScript + Vite for blazing performance, featuring smooth 60fps animations, responsive gamepad-like controls, immersive neon visual design, and a multi-game architecture with React Router navigation. Demonstrates advanced front-end engineering, creative product development, and performance optimization at the intersection of gaming and web technology.",
-    techTags: ["React", "TypeScript", "Vite", "Tailwind CSS", "React Router", "Node.js", "Game Dev"],
+    desc: "The ultimate skill-based multiplayer gaming arena. Features competitive games like Chess, Ludo, Pool, Carrom, and Uno. Built with modern web technologies for real-time multiplayer gameplay, allowing players to compete, win coins, and climb the global leaderboard with blazing-fast performance.",
+    techTags: ["React", "TypeScript", "Vite", "Tailwind CSS", "React Router", "Node.js", "Game Dev", "Multiplayer"],
     links: [
-      { text: "▶ Play Now", url: "https://neon-arcade-web.onrender.com/", primary: true }
+      { text: "▶ Play Now", url: "https://elite-skill-hub.com/", primary: true }
     ],
     featured: true
   },
