@@ -18,7 +18,7 @@ const About = () => {
               <div className="w-24 h-24 rounded-full border-2 border-accent mb-5 overflow-hidden shadow-[0_0_20px_rgba(124,106,247,0.3)] bg-[var(--surface2)]">
                 <img src="/profile.png" alt="Shaikh Muhammad" className="w-full h-full object-cover" />
               </div>
-              <div className="text-xl font-bold mb-1 text-[var(--text)]">Shaikh Muhammad</div>
+              <div className="text-xl font-bold mb-1 text-[var(--text)]">Shaikh Muhammad Abdulkhalik</div>
               <div className="text-accent2 text-sm font-medium mb-5">Software Engineer · Product Builder</div>
               
               <div className="flex flex-col gap-2.5">
