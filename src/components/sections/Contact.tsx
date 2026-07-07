@@ -4,17 +4,45 @@ import { motion } from 'framer-motion';
 const Contact = () => {
   const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' });
   const [status, setStatus] = useState<{ type: 'success' | 'error' | null, message: string }>({ type: null, message: '' });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.name || !formData.email || !formData.message) {
       setStatus({ type: 'error', message: 'Please fill in your name, email, and message.' });
       return;
     }
     
-    // Simulate sending
-    setStatus({ type: 'success', message: '✓ Message sent! I\'ll get back to you within 24 hours.' });
-    setFormData({ name: '', email: '', subject: '', message: '' });
+    setIsSubmitting(true);
+    setStatus({ type: null, message: '' });
+
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/muhammadshaikh4203@gmail.com", {
+        method: "POST",
+        headers: { 
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject || 'New Contact Form Submission',
+          message: formData.message,
+          _template: 'box'
+        })
+      });
+
+      if (response.ok) {
+        setStatus({ type: 'success', message: '✓ Message sent successfully! I\'ll get back to you soon.' });
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      } else {
+        setStatus({ type: 'error', message: 'Failed to send message. Please try again.' });
+      }
+    } catch (error) {
+      setStatus({ type: 'error', message: 'An error occurred. Please try again later.' });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -125,8 +153,8 @@ const Contact = () => {
                 ></textarea>
               </div>
               
-              <button type="submit" className="w-full btn-primary justify-center mt-2">
-                Send Message →
+              <button type="submit" disabled={isSubmitting} className="w-full btn-primary justify-center mt-2 disabled:opacity-70 disabled:cursor-not-allowed">
+                {isSubmitting ? 'Sending...' : 'Send Message →'}
               </button>
               
               {status.type && (
