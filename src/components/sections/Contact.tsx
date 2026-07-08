@@ -70,7 +70,7 @@ const Contact = () => {
               </div>
             </a>
             
-            <a className="flex items-center gap-4 bg-[var(--surface)] border border-[var(--border)] rounded-2xl p-5 text-[var(--text)] transition-all duration-300 hover:border-accent hover:translate-x-1 no-underline" href="https://github.com/" target="_blank" rel="noopener noreferrer">
+            <a className="flex items-center gap-4 bg-[var(--surface)] border border-[var(--border)] rounded-2xl p-5 text-[var(--text)] transition-all duration-300 hover:border-accent hover:translate-x-1 no-underline" href="https://github.com/MdDevCoder" target="_blank" rel="noopener noreferrer">
               <div className="w-11 h-11 rounded-xl bg-[rgba(34,197,94,0.12)] text-green-500 flex items-center justify-center text-xl shrink-0">🐙</div>
               <div>
                 <div className="text-[13px] font-bold mb-0.5">GitHub</div>
@@ -78,7 +78,7 @@ const Contact = () => {
               </div>
             </a>
             
-            <a className="flex items-center gap-4 bg-[var(--surface)] border border-[var(--border)] rounded-2xl p-5 text-[var(--text)] transition-all duration-300 hover:border-accent hover:translate-x-1 no-underline" href="https://linkedin.com/" target="_blank" rel="noopener noreferrer">
+            <a className="flex items-center gap-4 bg-[var(--surface)] border border-[var(--border)] rounded-2xl p-5 text-[var(--text)] transition-all duration-300 hover:border-accent hover:translate-x-1 no-underline" href="https://www.linkedin.com/in/muhammad-shaikh-3b0168253/" target="_blank" rel="noopener noreferrer">
               <div className="w-11 h-11 rounded-xl bg-[rgba(6,182,212,0.12)] text-teal-400 flex items-center justify-center text-xl shrink-0">💼</div>
               <div>
                 <div className="text-[13px] font-bold mb-0.5">LinkedIn</div>
