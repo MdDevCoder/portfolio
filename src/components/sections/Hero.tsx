@@ -107,7 +107,7 @@ const Hero = () => {
           className="flex flex-wrap gap-4 justify-center mb-12"
         >
           <a href="#projects" className="btn-primary">↗ View My Work</a>
-          <a href="mailto:muhammadshaikh4203@gmail.com" className="btn-ghost">Get In Touch</a>
+          <a href="#contact" className="btn-ghost">Get In Touch</a>
         </motion.div>
 
         <motion.div 
