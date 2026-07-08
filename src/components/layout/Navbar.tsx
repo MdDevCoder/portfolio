@@ -33,12 +33,14 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 glass-nav border-b border-[var(--border)] transition-all duration-300">
       <div className="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
-        <a href="#hero" className="text-xl font-bold text-gradient tracking-tight no-underline font-mono">
-          &lt;MdDevCoder /&gt;
-        </a>
+        <div className="flex-shrink-0">
+          <a href="#hero" className="text-xl font-bold text-gradient tracking-tight no-underline font-mono">
+            &lt;MdDevCoder /&gt;
+          </a>
+        </div>
         
         {/* Desktop Nav */}
-        <ul className="hidden md:flex items-center gap-1 list-none m-0 p-0">
+        <ul className="hidden md:flex items-center justify-center gap-1 list-none m-0 p-0 flex-1 mx-4">
           {navLinks.map((link) => (
             <li key={link.href}>
               <a 
@@ -49,21 +51,23 @@ const Navbar = () => {
               </a>
             </li>
           ))}
-          <li>
-            <a href="#contact" className="ml-2 px-4 py-2 rounded-lg text-sm font-medium bg-accent text-white hover:bg-accent2 hover:-translate-y-[1px] transition-all duration-300">
-              Let's Talk ↗
-            </a>
-          </li>
         </ul>
 
-        {/* Mobile Toggle */}
-        <button 
-          className="md:hidden bg-transparent border-none text-[var(--text)] p-2 cursor-pointer"
-          onClick={() => setIsOpen(!isOpen)}
-          aria-label="Toggle menu"
-        >
-          {isOpen ? '✕' : '☰'}
-        </button>
+        {/* Right Side Buttons */}
+        <div className="flex items-center flex-shrink-0 gap-2">
+          <a href="#contact" className="hidden md:inline-flex px-4 py-2 rounded-lg text-sm font-medium bg-accent text-white hover:bg-accent2 hover:-translate-y-[1px] transition-all duration-300">
+            Let's Talk ↗
+          </a>
+          
+          {/* Mobile Toggle */}
+          <button 
+            className="md:hidden bg-transparent border-none text-[var(--text)] p-2 cursor-pointer"
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label="Toggle menu"
+          >
+            {isOpen ? '✕' : '☰'}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Nav */}
