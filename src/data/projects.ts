@@ -1,5 +1,26 @@
 export const projectsData = [
   {
+    id: "textile-valley",
+    tags: ["web", "frontend", "real-estate"],
+    bannerGradient: "from-stone-800 to-emerald-800",
+    icon: "🏢",
+    badges: [
+      { text: "Web App", type: "web", color: "text-teal-400 bg-teal-400/15 border-teal-400/30" },
+      { text: "Real Estate", type: "frontend", color: "text-amber-400 bg-amber-400/15 border-amber-400/30" },
+      { text: "Live", type: "status", color: "text-green-400 bg-green-400/15 border-green-400/30" },
+      { text: "2026", type: "featured", color: "text-accent2 bg-accent/20 border-accent/30" }
+    ],
+    title: "Textile Valley",
+    subtitle: "Next.js · Tailwind CSS · TypeScript · Framer Motion",
+    desc: "A premium, state-of-the-art interactive platform showcasing South Gujarat's premier industrial and textile manufacturing park. Features an immersive, highly-interactive Master Plan to explore, inquire about, and reserve industrial plots, along with a custom-generated 3D visual gallery.",
+    techTags: ["Next.js", "Tailwind CSS", "TypeScript", "Framer Motion", "React"],
+    links: [
+      { text: "🌐 View Live", url: "https://textile-valley.vercel.app/", primary: true },
+      { text: "💻 GitHub", url: "https://github.com/MdDevCoder/Textile-Valley", primary: false }
+    ],
+    featured: true
+  },
+  {
     id: "campus-flow",
     tags: ["web", "fullstack", "saas", "enterprise"],
     bannerGradient: "from-blue-600 to-cyan-600",
