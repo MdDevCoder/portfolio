@@ -16,7 +16,7 @@ const About = () => {
             <div className="bg-[var(--surface)] border border-[var(--border)] rounded-2xl p-8 relative overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-br from-[rgba(124,106,247,0.08)] to-transparent pointer-events-none"></div>
               <div className="w-24 h-24 rounded-full border-2 border-accent mb-5 overflow-hidden shadow-[0_0_20px_rgba(124,106,247,0.3)] bg-[var(--surface2)]">
-                <img src="/profile.png" alt="Shaikh Muhammad" className="w-full h-full object-cover" />
+                <img src="/profile.png" alt="Shaikh Muhammad" className="w-full h-full object-cover" loading="lazy" />
               </div>
               <div className="text-xl font-bold mb-1 text-[var(--text)]">Shaikh Muhammad Abdulkhalik</div>
               <div className="text-accent2 text-sm font-medium mb-5">Software Engineer · Product Builder</div>

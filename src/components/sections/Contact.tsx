@@ -1,47 +1,63 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import * as z from 'zod';
+
+const formSchema = z.object({
+  name: z.string().min(1, "Name is required"),
+  email: z.string().min(1, "Email is required").email("Invalid email address"),
+  subject: z.string().optional(),
+  message: z.string().min(1, "Message is required"),
+});
+
+type FormValues = z.infer<typeof formSchema>;
 
 const Contact = () => {
-  const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' });
   const [status, setStatus] = useState<{ type: 'success' | 'error' | null, message: string }>({ type: null, message: '' });
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors, isSubmitting },
+  } = useForm<FormValues>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      name: '',
+      email: '',
+      subject: '',
+      message: '',
+    },
+  });
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!formData.name || !formData.email || !formData.message) {
-      setStatus({ type: 'error', message: 'Please fill in your name, email, and message.' });
-      return;
-    }
-    
-    setIsSubmitting(true);
+  const onSubmit = async (data: FormValues) => {
     setStatus({ type: null, message: '' });
 
     try {
-      const response = await fetch("https://formsubmit.co/ajax/muhammadshaikh4203@gmail.com", {
+      const endpoint = import.meta.env.VITE_FORMSUBMIT_ENDPOINT || "https://formsubmit.co/ajax/muhammadshaikh4203@gmail.com";
+      const response = await fetch(endpoint, {
         method: "POST",
         headers: { 
           'Content-Type': 'application/json',
           'Accept': 'application/json'
         },
         body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          subject: formData.subject || 'New Contact Form Submission',
-          message: formData.message,
+          ...data,
+          subject: data.subject || 'New Contact Form Submission',
           _template: 'box'
         })
       });
 
       if (response.ok) {
         setStatus({ type: 'success', message: '✓ Message sent successfully! I\'ll get back to you soon.' });
-        setFormData({ name: '', email: '', subject: '', message: '' });
+        reset();
       } else {
         setStatus({ type: 'error', message: 'Failed to send message. Please try again.' });
       }
     } catch (error) {
+      console.error("Form submission error:", error);
       setStatus({ type: 'error', message: 'An error occurred. Please try again later.' });
-    } finally {
-      setIsSubmitting(false);
     }
   };
 
@@ -104,29 +120,29 @@ const Contact = () => {
           >
             <div className="text-lg font-bold mb-6">Send a Message</div>
             
-            <form onSubmit={handleSubmit} className="flex flex-col gap-5">
+            <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-5">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="flex flex-col gap-1.5">
                   <label htmlFor="name" className="text-xs font-semibold text-[var(--text2)]">Your Name</label>
                   <input 
                     type="text" 
                     id="name" 
-                    value={formData.name}
-                    onChange={(e) => setFormData({...formData, name: e.target.value})}
+                    {...register('name')}
                     placeholder="Alex Johnson"
                     className="w-full bg-[var(--bg)] border border-[var(--border)] text-[var(--text)] p-3 rounded-xl text-[13px] font-sans transition-all duration-300 outline-none focus:border-accent focus:shadow-[0_0_0_3px_rgba(124,106,247,0.1)]"
                   />
+                  {errors.name && <span className="text-[11px] text-red-500">{errors.name.message}</span>}
                 </div>
                 <div className="flex flex-col gap-1.5">
                   <label htmlFor="email" className="text-xs font-semibold text-[var(--text2)]">Email Address</label>
                   <input 
                     type="email" 
                     id="email" 
-                    value={formData.email}
-                    onChange={(e) => setFormData({...formData, email: e.target.value})}
+                    {...register('email')}
                     placeholder="alex@company.com"
                     className="w-full bg-[var(--bg)] border border-[var(--border)] text-[var(--text)] p-3 rounded-xl text-[13px] font-sans transition-all duration-300 outline-none focus:border-accent focus:shadow-[0_0_0_3px_rgba(124,106,247,0.1)]"
                   />
+                  {errors.email && <span className="text-[11px] text-red-500">{errors.email.message}</span>}
                 </div>
               </div>
               
@@ -135,8 +151,7 @@ const Contact = () => {
                 <input 
                   type="text" 
                   id="subject" 
-                  value={formData.subject}
-                  onChange={(e) => setFormData({...formData, subject: e.target.value})}
+                  {...register('subject')}
                   placeholder="Job opportunity / Freelance project / Collaboration"
                   className="w-full bg-[var(--bg)] border border-[var(--border)] text-[var(--text)] p-3 rounded-xl text-[13px] font-sans transition-all duration-300 outline-none focus:border-accent focus:shadow-[0_0_0_3px_rgba(124,106,247,0.1)]"
                 />
@@ -146,11 +161,11 @@ const Contact = () => {
                 <label htmlFor="message" className="text-xs font-semibold text-[var(--text2)]">Message</label>
                 <textarea 
                   id="message" 
-                  value={formData.message}
-                  onChange={(e) => setFormData({...formData, message: e.target.value})}
+                  {...register('message')}
                   placeholder="Tell me about your project or opportunity..."
                   className="w-full bg-[var(--bg)] border border-[var(--border)] text-[var(--text)] p-3 rounded-xl text-[13px] font-sans transition-all duration-300 outline-none resize-none min-h-[120px] focus:border-accent focus:shadow-[0_0_0_3px_rgba(124,106,247,0.1)]"
                 ></textarea>
+                {errors.message && <span className="text-[11px] text-red-500">{errors.message.message}</span>}
               </div>
               
               <button type="submit" disabled={isSubmitting} className="w-full btn-primary justify-center mt-2 disabled:opacity-70 disabled:cursor-not-allowed">
